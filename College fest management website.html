@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Fest 2026</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f5ff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #321064, #9b36c7);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #240746;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container {
+            padding: 25px;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px #dddddd;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h3 {
+            color: #7228a8;
+        }
+
+        button {
+            background-color: #7928ca;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4b1485;
+        }
+
+        .schedule {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #7928ca;
+            color: white;
+        }
+
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 25px auto;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 15px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #240746;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎉 IGNITE 2026 🎉</h1>
+    <h2>The Annual College Fest</h2>
+    <p>Celebrate Creativity, Technology and Talent!</p>
+    <p>December 10–11, 2026</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#events">Events</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#register">Register</a>
+</nav>
+
+<div class="container">
+
+    <section class="intro" id="about">
+        <h2>Welcome to IGNITE 2026</h2>
+        <p>
+            Join us for two exciting days filled with innovation,
+            entertainment, competitions and unforgettable memories.
+        </p>
+    </section>
+
+    <section id="events">
+        <h2>Explore Our Events</h2>
+
+        <div class="events">
+
+            <div class="card">
+                <h3>💻 Code Quest</h3>
+                <p>Test your programming and problem-solving skills.</p>
+                <p><b>Category:</b> Technical</p>
+                <button onclick="selectEvent('Code Quest')">Register</button>
+            </div>
+
+            <div class="card">
+                <h3>🤖 AI Innovation</h3>
+                <p>Present creative ideas using artificial intelligence.</p>
+                <p><b>Category:</b> Technical</p>
+                <button onclick="selectEvent('AI Innovation')">Register</button>
+            </div>
+
+            <div class="card">
+                <h3>💃 Dance Battle</h3>
+                <p>Show your talent on the dance floor.</p>
+                <p><b>Category:</b> Cultural</p>
+                <button onclick="selectEvent('Dance Battle')">Register</button>
+            </div>
+
+            <div class="card">
+                <h3>🎤 Singing Stars</h3>
+                <p>Showcase your musical talent.</p>
+                <p><b>Category:</b> Cultural</p>
+                <button onclick="selectEvent('Singing Stars')">Register</button>
+            </div>
+
+            <div class="card">
+                <h3>🎨 Art Arena</h3>
+                <p>Express your imagination through art.</p>
+                <p><b>Category:</b> Creative</p>
+                <button onclick="selectEvent('Art Arena')">Register</button>
+            </div>
+
+            <div class="card">
+                <h3>🧠 Quiz Challenge</h3>
+                <p>Challenge your knowledge and teamwork.</p>
+                <p><b>Category:</b> General</p>
+                <button onclick="selectEvent('Quiz Challenge')">Register</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+        <h2>Event Schedule</h2>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Event</th>
+            </tr>
+
+            <tr>
+                <td>December 10</td>
+                <td>9:00 AM</td>
+                <td>Inauguration</td>
+            </tr>
+
+            <tr>
+                <td>December 10</td>
+                <td>10:00 AM</td>
+                <td>Code Quest</td>
+            </tr>
+
+            <tr>
+                <td>December 10</td>
+                <td>2:00 PM</td>
+                <td>AI Innovation</td>
+            </tr>
+
+            <tr>
+                <td>December 11</td>
+                <td>10:00 AM</td>
+                <td>Dance Battle</td>
+            </tr>
+
+            <tr>
+                <td>December 11</td>
+                <td>3:00 PM</td>
+                <td>Prize Distribution</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="register">
+        <h2 style="text-align:center;">Student Registration</h2>
+
+        <form onsubmit="registerStudent(event)">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>College Email</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Department</label>
+            <select required>
+                <option value="">Select Department</option>
+                <option>CSE</option>
+                <option>CSM</option>
+                <option>ECE</option>
+                <option>EEE</option>
+            </select>
+
+            <label>Select Event</label>
+            <select id="event" required>
+                <option value="">Choose an event</option>
+                <option>Code Quest</option>
+                <option>AI Innovation</option>
+                <option>Dance Battle</option>
+                <option>Singing Stars</option>
+                <option>Art Arena</option>
+                <option>Quiz Challenge</option>
+            </select>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>IGNITE 2026 | Organized by the College Student Council</p>
+    <p>Contact: ignite@example.com</p>
+</footer>
+
+<script>
+    function selectEvent(eventName) {
+        document.getElementById("event").value = eventName;
+
+        document.getElementById("register").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    function registerStudent(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let selectedEvent = document.getElementById("event").value;
+
+        alert("Thank you, " + name +
+              "! Your demo registration for " +
+              selectedEvent + " has been submitted.");
+
+        event.target.reset();
+    }
+</script>
+
+</body>
+</html>

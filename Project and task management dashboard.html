@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project and Task Management</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f5fa;
+        }
+
+        header {
+            background-color: #202b46;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 200px;
+            background-color: #293653;
+            color: white;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        aside a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 5px;
+            border-bottom: 1px solid #46516b;
+        }
+
+        aside a:hover {
+            background-color: #46516b;
+        }
+
+        main {
+            padding: 25px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #dddddd;
+        }
+
+        .card h3 {
+            color: #293653;
+        }
+
+        .task-board {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .column {
+            background-color: #e5eaf3;
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 0;
+        }
+
+        .task {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #526fe4;
+        }
+
+        .task p {
+            color: #555555;
+        }
+
+        .progress {
+            background-color: #dddddd;
+            height: 12px;
+            border-radius: 10px;
+        }
+
+        .bar {
+            background-color: #526fe4;
+            height: 12px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #526fe4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #354ab0;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            max-width: 90%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #202b46;
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            aside {
+                width: auto;
+            }
+
+            .task-board {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Project Management Dashboard</h1>
+    <p>Plan Better. Work Smarter. Achieve More.</p>
+</header>
+
+<div class="layout">
+
+    <aside>
+        <h2>Workspace</h2>
+        <a href="#overview">Dashboard</a>
+        <a href="#projects">Projects</a>
+        <a href="#tasks">My Tasks</a>
+        <a href="#team">Team</a>
+        <a href="#create">Add Task</a>
+    </aside>
+
+    <main>
+
+        <section id="overview">
+            <h2>Dashboard Overview</h2>
+
+            <div class="summary">
+
+                <div class="card">
+                    <h3>Total Projects</h3>
+                    <h2 id="projectCount">4</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Total Tasks</h3>
+                    <h2 id="taskCount">6</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Completed</h3>
+                    <h2 id="completedCount">2</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Team Members</h3>
+                    <h2>5</h2>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Current Projects</h2>
+
+            <div class="summary">
+
+                <div class="card">
+                    <h3>Website Development</h3>
+                    <p>Deadline: November 10</p>
+                    <p>Progress: 75%</p>
+
+                    <div class="progress">
+                        <div class="bar" style="width:75%"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>AI Research Project</h3>
+                    <p>Deadline: November 15</p>
+                    <p>Progress: 50%</p>
+
+                    <div class="progress">
+                        <div class="bar" style="width:50%"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>College Presentation</h3>
+                    <p>Deadline: November 20</p>
+                    <p>Progress: 90%</p>
+
+                    <div class="progress">
+                        <div class="bar" style="width:90%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="tasks">
+            <h2>Task Board</h2>
+
+            <div class="task-board">
+
+                <div class="column">
+                    <h3>To Do</h3>
+
+                    <div class="task">
+                        <h4>Design Homepage</h4>
+                        <p>Priority: High</p>
+                        <p>Deadline: Nov 5</p>
+                    </div>
+
+                    <div class="task">
+                        <h4>Collect Project Data</h4>
+                        <p>Priority: Medium</p>
+                        <p>Deadline: Nov 7</p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>In Progress</h3>
+
+                    <div class="task">
+                        <h4>Develop HTML Pages</h4>
+                        <p>Priority: High</p>
+                        <p>Deadline: Nov 8</p>
+                    </div>
+
+                    <div class="task">
+                        <h4>Prepare Presentation</h4>
+                        <p>Priority: Medium</p>
+                        <p>Deadline: Nov 12</p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3>Completed</h3>
+
+                    <div class="task">
+                        <h4>Choose Project Topic</h4>
+                        <p>Status: Completed</p>
+                    </div>
+
+                    <div class="task">
+                        <h4>Team Formation</h4>
+                        <p>Status: Completed</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="team">
+            <h2>Team Members</h2>
+
+            <div class="summary">
+
+                <div class="card">
+                    <h3>Amrutha</h3>
+                    <p>Project Leader</p>
+                </div>
+
+                <div class="card">
+                    <h3>Member 2</h3>
+                    <p>Frontend Developer</p>
+                </div>
+
+                <div class="card">
+                    <h3>Member 3</h3>
+                    <p>Designer</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="create">
+            <h2>Add a New Task</h2>
+
+            <div class="card">
+
+                <form id="taskForm">
+                    <input type="text" id="taskName"
+                           placeholder="Enter task name" required>
+
+                    <input type="date" id="taskDate" required>
+
+                    <button type="submit">Add Task</button>
+                </form>
+
+                <p id="message"></p>
+
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+    <p>Project Management Dashboard | Work Together, Succeed Together</p>
+</footer>
+
+<script>
+    let taskCount = 6;
+
+    document.getElementById("taskForm").addEventListener(
+        "submit",
+        function(event) {
+            event.preventDefault();
+
+            let taskName = document.getElementById("taskName").value;
+            let taskDate = document.getElementById("taskDate").value;
+
+            let task = document.createElement("div");
+            task.className = "task";
+
+            let heading = document.createElement("h4");
+            heading.textContent = taskName;
+
+            let deadline = document.createElement("p");
+            deadline.textContent = "Deadline: " + taskDate;
+
+            let status = document.createElement("p");
+            status.textContent = "Status: To Do";
+
+            task.appendChild(heading);
+            task.appendChild(deadline);
+            task.appendChild(status);
+
+            document.querySelector(".column").appendChild(task);
+
+            taskCount++;
+            document.getElementById("taskCount").textContent = taskCount;
+
+            document.getElementById("message").textContent =
+                "Task added successfully!";
+
+            this.reset();
+        }
+    );
+</script>
+
+</body>
+</html>

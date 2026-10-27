@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Academic Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f4f8;
+        }
+
+        header {
+            background-color: #243b64;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #172a4a;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container {
+            padding: 25px;
+        }
+
+        .profile {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 180px;
+            box-shadow: 0 3px 8px #cccccc;
+        }
+
+        .card h3 {
+            color: #243b64;
+        }
+
+        .progress {
+            background-color: #dddddd;
+            border-radius: 10px;
+            height: 12px;
+        }
+
+        .bar {
+            background-color: #27ae60;
+            height: 12px;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            background-color: white;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #dddddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #243b64;
+            color: white;
+        }
+
+        footer {
+            background-color: #243b64;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .cards {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Academic Dashboard</h1>
+    <p>Welcome to Your Learning Space</p>
+</header>
+
+<nav>
+    <a href="#profile">Profile</a>
+    <a href="#attendance">Attendance</a>
+    <a href="#marks">Marks</a>
+    <a href="#timetable">Timetable</a>
+</nav>
+
+<div class="container">
+
+    <section class="profile" id="profile">
+        <h2>Student Profile</h2>
+        <p><b>Name:</b> Amrutha Yanaganti</p>
+        <p><b>Branch:</b> CSE - AI & ML</p>
+        <p><b>Year:</b> First Year</p>
+        <p><b>College:</b> ABC Engineering College</p>
+    </section>
+
+    <h2>Academic Overview</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Attendance</h3>
+            <h2>85%</h2>
+            <div class="progress">
+                <div class="bar" style="width:85%"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Semester GPA</h3>
+            <h2>8.7</h2>
+            <p>Current Semester</p>
+        </div>
+
+        <div class="card">
+            <h3>Subjects</h3>
+            <h2>6</h2>
+            <p>Registered Subjects</p>
+        </div>
+
+    </div>
+
+    <section id="marks">
+        <h2>Semester Marks</h2>
+
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Maximum Marks</th>
+            </tr>
+
+            <tr>
+                <td>Python Programming</td>
+                <td>88</td>
+                <td>100</td>
+            </tr>
+
+            <tr>
+                <td>Mathematics</td>
+                <td>82</td>
+                <td>100</td>
+            </tr>
+
+            <tr>
+                <td>Web Development</td>
+                <td>91</td>
+                <td>100</td>
+            </tr>
+
+            <tr>
+                <td>Computer Fundamentals</td>
+                <td>86</td>
+                <td>100</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="attendance">
+        <h2>Attendance Details</h2>
+        <div class="card">
+            <p>Python Programming - 90%</p>
+            <p>Mathematics - 82%</p>
+            <p>Web Development - 88%</p>
+            <p>Computer Fundamentals - 85%</p>
+        </div>
+    </section>
+
+    <section id="timetable">
+        <h2>Class Timetable</h2>
+
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>9:00 AM</th>
+                <th>10:00 AM</th>
+                <th>11:00 AM</th>
+            </tr>
+
+            <tr>
+                <td>Monday</td>
+                <td>Python</td>
+                <td>Mathematics</td>
+                <td>Web Development</td>
+            </tr>
+
+            <tr>
+                <td>Tuesday</td>
+                <td>English</td>
+                <td>Python</td>
+                <td>Lab</td>
+            </tr>
+
+            <tr>
+                <td>Wednesday</td>
+                <td>Mathematics</td>
+                <td>Web Development</td>
+                <td>Python</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Announcements</h2>
+        <div class="card">
+            <p>📢 Python assignment submission is approaching.</p>
+            <p>📢 Web Development project presentations will be held soon.</p>
+            <p>📢 Check the examination schedule regularly.</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Student Academic Dashboard | Learn, Grow, Succeed</p>
+</footer>
+
+</body>
+</html>
